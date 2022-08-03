@@ -6,7 +6,8 @@ namespace EmployeeProject
     {
        public static void Main(String[] args)
         {
-            int Is_Full_Time = 1;
+            int Is_Part_Time = 1;
+            int Is_Full_Time = 2;
             int EMP_RATE_PER_HOUR = 20;
 
             int empHrs = 0;
@@ -14,10 +15,14 @@ namespace EmployeeProject
 
             Random random = new Random();
 
-            int empCheck = random.Next(0, 2);
+            int empCheck = random.Next(0, 3);
 
-            if(empCheck == Is_Full_Time)
+            if(empCheck == Is_Part_Time)
             {
+                empHrs = 4;
+            }
+            else if(empCheck == Is_Full_Time)
+             {
                 empHrs = 8;
             }
             else
